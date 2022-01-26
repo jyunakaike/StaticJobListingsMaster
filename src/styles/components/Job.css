@@ -1,0 +1,103 @@
+@import "../_vars.css";
+
+.JobContainer{
+    background-color: red;
+    width: 100%;
+    height: 100px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    padding: 0 50px 0 50px;
+}
+
+.JobContainer-Job{
+    background-color: yellow;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    gap: 10px;    
+    height: 100%;
+}
+/* .Job--Logo{
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+} */
+.Job--Detail{
+    /* background-color: hotpink; */
+    height: 100%;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+}
+
+.Detail--Company{
+    color: var(--DesaturatedDarkCyan);
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    gap: 25px;    
+    
+}
+
+.New{
+    background-color: var( --DesaturatedDarkCyan);
+    color: white;
+    border-radius: 20px;
+    width: 50px;
+    height: 23px;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.Featured{
+    background-color: var( --VeryDarkGrayishCyan);
+    color: white;
+    border-radius: 20px;
+    width: 65px;
+    height: 23px;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+.Detail--Position{
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
+.Detail--TimeLocation{
+    color: var(--DarkGrayishCyan );
+}
+
+.Detail--TimeLocation{
+    display: flex;
+        flex-direction: row;
+    gap: 20px;
+}
+
+.JobContainer-SeparatorLine{
+    display: none;
+}
+
+.JobContainer-Etiquetes{
+    background-color: green;
+    display: flex;
+        justify-content: flex-end;
+    gap: 15px;
+}
+
+
+
+
+
+
+
+
