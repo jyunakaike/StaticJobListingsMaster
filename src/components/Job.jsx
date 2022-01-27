@@ -16,18 +16,14 @@ const Job = ({ job }) => {
 
 
 
-
+  // const logo = require('./logo.jpeg); // with require
 
   return (
     <div className='JobContainer' key={job.id}  >
-      {/* <button onClick={button}>holas</button> */}
-      {/* {
-        etiquete.map(todo => <div>{todo}</div>)
-      } */}
-
-
       <div className='JobContainer-Job' >
-        <img src={photosnap} alt="" />
+        <img src={ require(`../assets/images/${job.logo}`)} alt="" />
+
+
         <div className='Job--Detail'>
           <div className='Detail--Company'>
             {job.company}
