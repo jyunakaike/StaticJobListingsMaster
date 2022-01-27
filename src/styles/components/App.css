@@ -28,7 +28,51 @@ main{
     display: flex;
         justify-content: center;
         align-items:center;
-    
-
 }
+
+.filterContainer{
+    background-color: white;
+    position: absolute;
+    top: 72px;
+    width: 80%;
+    height: 50px;
+    border-radius: 8px;
+    padding: 0 50px 0 50px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    box-shadow: var(--DarkGrayishCyan) 1.95px 1.95px 2.6px;
+}
+.filterItemContainer{
+    display: flex;
+        justify-content: flex-start;
+    gap:10px;
+}
+
+.filterItem {
+    
+    border-radius: 5px;
+    display: flex;
+        justify-content: space-between;
+    padding: 10px;
+    width: 90px;
+}
+.item{
+    padding :10px;
+    background-color: var(--LightGrayishCyan);
+    color: var(--DesaturatedDarkCyan);
+    font-weight: bold;
+    
+}
+
+.removeItem{
+    background-color:var( --DesaturatedDarkCyan);
+    width: 153px;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+
 
