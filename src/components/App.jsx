@@ -16,7 +16,6 @@ const App = () => {
                 <JobList >
                     {
                         job.map((todo) => <Job job={todo} />)
-                        // job.map((todo) => <div key={todo.id}>{todo.id}</div>)
                     }
                 </JobList>
             </main>

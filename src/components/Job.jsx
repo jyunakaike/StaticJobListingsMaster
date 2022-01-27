@@ -7,12 +7,12 @@ const Job = ({ job }) => {
   let etiquete = [job.role, job.level]
   etiquete = etiquete.concat(job.languages, job.tools)
 
-  const button = () => {
+  // const button = () => {
 
-    etiquete.map(todo => console.log(todo))
+  //   etiquete.map(todo => console.log(todo))
 
 
-  }
+  // }
 
 
 
@@ -37,7 +37,7 @@ const Job = ({ job }) => {
                 : null
             }
             {
-              (job.fetured)
+              (job.featured)
                 ? <div className='Featured'>FEATURED</div>
                 : null
             }
@@ -54,10 +54,8 @@ const Job = ({ job }) => {
       <div className='JobContainer-SeparatorLine' >Linea</div>
 
       <div className='JobContainer-Etiquetes'>
-
         {
           etiquete.map(todo => <div className='Etiquete'>{todo}</div>)
-
         }
       </div>
     </div>
