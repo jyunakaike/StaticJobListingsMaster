@@ -1,28 +1,26 @@
 @import "../_vars.css";
 
 .JobContainer{
-    background-color: red;
+    background-color: white;
     width: 100%;
     height: 100px;
     display: flex;
         justify-content: space-between;
         align-items: center;
     padding: 0 50px 0 50px;
+    border-radius: 8px;
+    box-shadow: var(--DarkGrayishCyan) 1.95px 1.95px 2.6px;
 }
 
 .JobContainer-Job{
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
         justify-content: space-between;
         align-items: center;
     gap: 10px;    
     height: 100%;
 }
-/* .Job--Logo{
-    width: 10px;
-    height: 10px;
-    border-radius: 15px;
-} */
+
 .Job--Detail{
     /* background-color: hotpink; */
     height: 100%;
@@ -40,7 +38,6 @@
         justify-content: center;
         align-items: center;
     gap: 25px;    
-    
 }
 
 .New{
@@ -49,7 +46,6 @@
     border-radius: 20px;
     width: 50px;
     height: 23px;
-
     display: flex;
         justify-content: center;
         align-items: center;
@@ -61,17 +57,14 @@
     border-radius: 20px;
     width: 65px;
     height: 23px;
-
     display: flex;
         justify-content: center;
         align-items: center;
 }
 
-
 .Detail--Position{
     font-weight: bold;
     font-size: 1.5rem;
-    
 }
 .Detail--TimeLocation{
     color: var(--DarkGrayishCyan );
@@ -88,10 +81,19 @@
 }
 
 .JobContainer-Etiquetes{
-    background-color: green;
+    /* background-color: green; */
     display: flex;
         justify-content: flex-end;
     gap: 15px;
+}
+
+.Etiquete{
+    background-color: var(--LightGrayishCyan);
+    border-radius: 5px;
+    padding :10px;
+    color: var(--DesaturatedDarkCyan);
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 
@@ -101,3 +103,4 @@
 
 
 
+ 

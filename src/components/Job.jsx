@@ -3,24 +3,50 @@ import '../styles/components/Job.css'
 
 import photosnap from '../assets/images/photosnap.svg'
 
-const Job = (props) => {
+const Job = ({ job }) => {
+  let etiquete = [job.role, job.level]
+  etiquete = etiquete.concat(job.languages, job.tools)
+
+  const button = () => {
+
+    etiquete.map(todo => console.log(todo))
+
+
+  }
+
+
+
+
+
   return (
-    <div className='JobContainer'>
+    <div className='JobContainer' key={job.id}  >
+      {/* <button onClick={button}>holas</button> */}
+      {/* {
+        etiquete.map(todo => <div>{todo}</div>)
+      } */}
+
 
       <div className='JobContainer-Job' >
         <img src={photosnap} alt="" />
-        
         <div className='Job--Detail'>
           <div className='Detail--Company'>
-            Photoshop
-            <div className='New' >NEW</div>
-            <div className='Featured'>FEATURED</div>
+            {job.company}
+            {
+              (job.new)
+                ? <div className='New' >NEW</div>
+                : null
+            }
+            {
+              (job.fetured)
+                ? <div className='Featured'>FEATURED</div>
+                : null
+            }
           </div>
-          <div className='Detail--Position'>Senior Frontend Developer</div>
-          <div className='Detail--TimeLocation'> 
-             <div>1d ago</div>
-             <div>FullTime</div>
-             <div>USA only</div>
+          <div className='Detail--Position'>{job.position}</div>
+          <div className='Detail--TimeLocation'>
+            <div>{job.postedAt}</div>
+            <div>{job.contract}</div>
+            <div>{job.location}</div>
           </div>
         </div>
       </div>
@@ -28,13 +54,14 @@ const Job = (props) => {
       <div className='JobContainer-SeparatorLine' >Linea</div>
 
       <div className='JobContainer-Etiquetes'>
-        <div>etiquetas1</div> 
-        <div>etiquetas2</div> 
-        <div>etiquetas3</div> 
-        <div>etiquetas5</div> 
-      </div>
 
+        {
+          etiquete.map(todo => <div className='Etiquete'>{todo}</div>)
+
+        }
+      </div>
     </div>
+
   );
 };
 

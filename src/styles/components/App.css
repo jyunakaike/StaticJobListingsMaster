@@ -22,7 +22,7 @@ header{
 
 main{
     /* background-color: var(--LightGrayishCyan);  */
-    background-color: gray;
+    background-color: var(--LightGrayishCyan);
     width: 100vw;
     height: 89.3vh; /*maybe change later*/
     display: flex;
