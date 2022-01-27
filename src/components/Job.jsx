@@ -1,22 +1,23 @@
-import React  from 'react';
+import React from 'react';
 import '../styles/components/Job.css'
 
-const Job = ({ job , setShowEtiquete ,showEtiquete }) => {
+const Job = ({ job, setShowEtiquete, showEtiquete  }) => {
 
-  let etiquete = [job.role, job.level]
-  etiquete = etiquete.concat(job.languages, job.tools)
+  let etiquete = [job.role, job.level].concat(job.languages, job.tools)
 
   const filterEtiquete = (etiquete) => {
-    if (showEtiquete.length === 0) {
-      setShowEtiquete(  [etiquete] )
-    }
-    else{
-      setShowEtiquete( [ ...showEtiquete ,etiquete] )
-    }
+      if (showEtiquete.length === 0) {
+        setShowEtiquete([etiquete])
+      }
+      else {
+        (showEtiquete.includes(etiquete))
+        ? null
+        :setShowEtiquete([...showEtiquete, etiquete])
+      }
   }
 
   return (
-  
+
     <div className='JobContainer' key={job.id}  >
       <div className='JobContainer-Job' >
         <img src={require(`../assets/images/${job.logo}`)} alt="" />
