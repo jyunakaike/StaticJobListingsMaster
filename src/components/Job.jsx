@@ -1,29 +1,19 @@
 import React from 'react';
 import '../styles/components/Job.css'
 
-import photosnap from '../assets/images/photosnap.svg'
-
 const Job = ({ job }) => {
+
   let etiquete = [job.role, job.level]
   etiquete = etiquete.concat(job.languages, job.tools)
 
-  // const button = () => {
-
-  //   etiquete.map(todo => console.log(todo))
-
-
-  // }
-
-
-
-  // const logo = require('./logo.jpeg); // with require
+  const filterEtiquete = (etiquete) =>{ 
+    console.log(`Clicked ${etiquete}`)
+  }
 
   return (
     <div className='JobContainer' key={job.id}  >
       <div className='JobContainer-Job' >
         <img src={ require(`../assets/images/${job.logo}`)} alt="" />
-
-
         <div className='Job--Detail'>
           <div className='Detail--Company'>
             {job.company}
@@ -51,7 +41,7 @@ const Job = ({ job }) => {
 
       <div className='JobContainer-Etiquetes'>
         {
-          etiquete.map(todo => <div className='Etiquete'>{todo}</div>)
+          etiquete.map(item => <div className='Etiquete' onClick={() => filterEtiquete(item)} key={item}>{item}</div>)
         }
       </div>
     </div>

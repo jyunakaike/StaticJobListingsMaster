@@ -15,7 +15,7 @@ const App = () => {
             <main>
                 <JobList >
                     {
-                        job.map((todo) => <Job job={todo} />)
+                        job.map((jobItem) => <Job job={jobItem} key={jobItem.id} />)
                     }
                 </JobList>
             </main>
