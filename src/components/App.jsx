@@ -7,9 +7,7 @@ import '../styles/components/App.css'
 
 const App = () => {
     const job = initialState.list;
-
     const [showEtiquete, setShowEtiquete] = useState([]);
-
 
     const clearFilter = () => {
         setShowEtiquete([])
@@ -18,6 +16,7 @@ const App = () => {
         const arr = showEtiquete.filter((item) => item !== i)
         setShowEtiquete(arr);
     }
+
     return (
         <React.Fragment>
             <header>
@@ -33,7 +32,7 @@ const App = () => {
                                         <div className='removeItem' onClick={() => clearFilterItem(item)}>x</div>
                                     </div>)}
                             </div>
-                            <a onClick={clearFilter} >Clear</a>
+                            <a className='ClearFilters' onClick={clearFilter} >Clear</a>
                         </div>
                         : null
                 }

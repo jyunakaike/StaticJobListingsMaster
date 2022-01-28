@@ -1,5 +1,5 @@
 section{
-    position: absolute;
+    /* position: absolute; */
     /* background-color: blue;  */
     width: 80%;
     height: 80%;
@@ -7,4 +7,18 @@ section{
     flex-direction: column;
     gap: 20px;
    
+}
+
+@media (max-width:760px ) {
+    section{
+        /* position: absolute; */
+        /* background-color: blue;  */
+        width: 80%;
+        height: 80%;
+        display: grid;
+        gap: 20px;
+       
+    }
+    
+    
 }

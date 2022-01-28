@@ -1,4 +1,5 @@
 @import "../_vars.css";
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +8,10 @@
 html{
     font-size: 62.5%;
     font-family: 'Spartan', sans-serif;
+}
+
+body{
+    background-color: var(--LightGrayishCyan);
 }
 
 h1{
@@ -21,8 +26,7 @@ header{
 }
 
 main{
-    /* background-color: var(--LightGrayishCyan);  */
-    background-color: var(--LightGrayishCyan);
+        /* background-color: var(--LightGrayishCyan); */
     width: 100vw;
     height: 89.3vh; /*maybe change later*/
     display: flex;
@@ -50,24 +54,32 @@ main{
 }
 
 .filterItem {
-    
     border-radius: 5px;
     display: flex;
         justify-content: space-between;
     padding: 10px;
-    width: 90px;
+    width: auto;
 }
 .item{
     padding :10px;
     background-color: var(--LightGrayishCyan);
     color: var(--DesaturatedDarkCyan);
     font-weight: bold;
+    font-size: 1.4rem;
     
 }
 
 .removeItem{
-    background-color:var( --DesaturatedDarkCyan);
-    width: 153px;
+    background-color: var( --DesaturatedDarkCyan);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+}
+.removeItem:hover{
+    background-color:var(--VeryDarkGrayishCyan);
+    width: auto;
     height: auto;
     padding: 10px;
     color: white;
@@ -75,4 +87,83 @@ main{
 }
 
 
+.ClearFilters{
+    color: var(--DarkGrayishCyan);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.ClearFilters:hover{
+    color: var(--DesaturatedDarkCyan);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-decoration-line: underline; 
+}
+
+@media (max-width: 759px) {
+    header{
+        background-image: url("../../assets/images/bg-header-mobile.svg");
+        background-color: var(--DesaturatedDarkCyan);
+        width: 100vw;
+        height: 100px;
+    }
+
+    .filterContainer{
+        background-color: white;
+        position: absolute;
+        top: 47px;
+        width: 80%;
+        height: 100px;
+        border-radius: 8px;
+        padding: 0 10px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: var(--DarkGrayishCyan) 1.95px 1.95px 2.6px;
+        
+    }
+    .filterItemContainer{
+        background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0px;
+        width: 85%;
+        height: 100%;
+    }
+    .filterItem{
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px;
+        width: auto;
+    }
+
+    .item{
+        padding: 5px;
+        background-color: var(--LightGrayishCyan);
+        color: var(--DesaturatedDarkCyan);
+        font-weight: bold;
+        font-size: 1rem;
+        width: auto;
+        height: 20px;
+    }
+
+    .removeItem{
+        background-color: var( --DesaturatedDarkCyan);
+        width: auto;
+        height: 20px;
+        padding: 5px;
+        color: white;
+        font-size: 1rem;
+    }
+
+    
+    
+
+    
+
+    
+}
 

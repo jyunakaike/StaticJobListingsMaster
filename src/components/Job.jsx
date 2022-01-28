@@ -19,8 +19,9 @@ const Job = ({ job, setShowEtiquete, showEtiquete  }) => {
   return (
 
     <div className='JobContainer' key={job.id}  >
+      
       <div className='JobContainer-Job' >
-        <img src={require(`../assets/images/${job.logo}`)} alt="" />
+      <img className='image' src={require(`../assets/images/${job.logo}`)} alt="" />
         <div className='Job--Detail'>
           <div className='Detail--Company'>
             {job.company}
@@ -44,7 +45,7 @@ const Job = ({ job, setShowEtiquete, showEtiquete  }) => {
         </div>
       </div>
 
-      <div className='JobContainer-SeparatorLine' >Linea</div>
+      <div className='JobContainer-SeparatorLine' ></div>
 
       <div className='JobContainer-Etiquetes'>
         {
