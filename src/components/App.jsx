@@ -42,18 +42,19 @@ const App = () => {
                             ?
                             job.filter(item => {
                                 const va1 = [item.role, item.level].concat(item.languages, item.tools)
-                                const va2 = showEtiquete 
+                                const va2 = showEtiquete
 
                                 const intersection = va1.filter(e => {
                                     return va2.indexOf(e) > -1
                                 })
 
-                                const returnBool = () => {
-                                    if (JSON.stringify(intersection)==JSON.stringify(va2)) {
-                                        return true
+                                const returnBool =() => {
+                                    if(intersection.length=== va2.length)
+                                    {
+                                        return true;
                                     }
-                                    else {
-                                        return false
+                                    else{
+                                        return false;
                                     }
                                 }
                                 return returnBool()
