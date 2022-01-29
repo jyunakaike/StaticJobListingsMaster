@@ -67,6 +67,12 @@
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+.Detail--Position:hover{
+    color: var(--DesaturatedDarkCyan);
+    cursor: pointer;
+}
+
 .Detail--TimeLocation{
     color: var(--DarkGrayishCyan );
 }
@@ -96,10 +102,15 @@
     font-size: 1rem;
     font-weight: bold;
 }
+.Etiquete:hover{
+    background-color: var(--DesaturatedDarkCyan);
+    color: var(--LightGrayishCyan);
+    cursor: pointer;
+}
 
 @media (max-width:760px ) {
     .JobContainer{
-        background-color: gray;
+        background-color: white;
         width: 100%;
         min-width: 0;
         height: 219px;
@@ -111,7 +122,7 @@
     }
 
     .JobContainer-Job {
-        background-color: yellow;
+        /* background-color: yellow; */
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -126,25 +137,24 @@
     }
 
     .Job--Detail {
-        background-color: hotpink;
+        /* background-color: hotpink; */
         width: 100%;
         height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
-        padding-top: 15px;
+        gap: 5px;
     }
 
     .JobContainer-SeparatorLine{
         display: grid;
-        border-bottom: 3px solid;
+        border-bottom: gray 1px solid;
         width: 100%;
         margin: 10px 0 10px 0;
     }
     .JobContainer-Etiquetes{
         /* background-color: green; */
-        background-color: green;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
