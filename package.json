@@ -1,12 +1,15 @@
 {
+  "homepage": "https://jyunakaike.github.io/StaticJobListingsMaster/",
   "name": "static-job-listings-master",
   "version": "1.0.0",
   "description": "![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy":"npm run build", 
+    "deploy":"gh-pages -d dist"
 
   },
   "author": "Jorge Jyun Nakamura Ikeda",
